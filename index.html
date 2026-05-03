@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEOrank — Rank Higher on Google & AI Search</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',system-ui,sans-serif;background:#f8f7f4;color:#0f1117;overflow-x:hidden;}
+a{text-decoration:none;}
+.nav{background:#fff;border-bottom:1px solid #e8e6e1;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:100;}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.25rem;font-weight:800;color:#0f1117;letter-spacing:-0.02em;}
+.logo span{color:#1a56db;}
+.nav-btn{background:#1a56db;color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;}
+.nav-btn:hover{background:#1447b8;}
+.hero{background:#fff;padding:5rem 2rem 4rem;text-align:center;border-bottom:1px solid #e8e6e1;}
+.hero-inner{max-width:700px;margin:0 auto;}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:1.75rem;}
+.trust-dot{width:8px;height:8px;background:#16a34a;border-radius:50%;}
+.trust-text{font-size:13px;color:#4b5563;font-weight:500;}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;color:#0f1117;margin-bottom:1.25rem;}
+h1 .blue{color:#1a56db;}
+h1 .uw{position:relative;display:inline-block;}
+h1 .uw::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:4px;background:#1a56db;border-radius:2px;}
+.hero-sub{font-size:1.05rem;color:#4b5563;line-height:1.75;max-width:520px;margin:0 auto 2.25rem;}
+.hero-form{background:#f8f7f4;border:1px solid #e8e6e1;border-radius:14px;padding:1.75rem;max-width:500px;margin:0 auto 1.75rem;text-align:left;}
+.hero-form-title{font-size:15px;font-weight:600;color:#0f1117;margin-bottom:1.25rem;text-align:center;}
+.hf-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.hf-single{margin-bottom:10px;}
+.hf-label{display:block;font-size:12px;font-weight:600;color:#6b7280;margin-bottom:5px;letter-spacing:0.04em;text-transform:uppercase;}
+.hf-input{width:100%;background:#fff;border:1.5px solid #e8e6e1;color:#0f1117;padding:11px 13px;border-radius:8px;font-size:14px;font-family:inherit;outline:none;transition:border-color 0.15s;}
+.hf-input:focus{border-color:#1a56db;}
+.hf-input::placeholder{color:#c4c4c4;}
+.hero-cta{width:100%;background:#1a56db;color:#fff;border:none;padding:14px;border-radius:10px;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer;transition:background 0.15s;margin-top:4px;letter-spacing:-0.01em;}
+.hero-cta:hover{background:#1447b8;}
+.hero-cta:disabled{background:#93b4ef;cursor:not-allowed;}
+.micro-trust{display:flex;align-items:center;justify-content:center;gap:16px;font-size:12px;color:#9ca3af;flex-wrap:wrap;}
+.micro-item{display:flex;align-items:center;gap:5px;}
+.ci{width:14px;height:14px;flex-shrink:0;}
+.proof-bar{background:#f8f7f4;border-bottom:1px solid #e8e6e1;padding:1.5rem 2rem;text-align:center;}
+.proof-label{font-size:12px;color:#9ca3af;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.25rem;}
+.proof-logos{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;align-items:center;}
+.proof-logo{font-size:13px;font-weight:700;color:#c4c4c4;letter-spacing:0.04em;}
+.problem{background:#0f1117;padding:4.5rem 2rem;text-align:center;}
+.problem-inner{max-width:680px;margin:0 auto;}
+.sec-eyebrow{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1a56db;margin-bottom:1rem;}
+.problem h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#fff;margin-bottom:1rem;}
+.problem .sub{font-size:15px;color:#6b7280;line-height:1.75;margin-bottom:3rem;}
+.prob-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#1f2937;border-radius:14px;overflow:hidden;}
+.prob-card{background:#111827;padding:2rem 1.5rem;text-align:left;}
+.prob-pct{font-family:'Bricolage Grotesque',sans-serif;font-size:2.5rem;font-weight:800;color:#ef4444;line-height:1;margin-bottom:0.5rem;}
+.prob-card p{font-size:13px;color:#6b7280;line-height:1.65;}
+.solution{background:#fff;padding:5rem 2rem;}
+.sol-inner{max-width:1000px;margin:0 auto;}
+.sol-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.sol-sub{font-size:15px;color:#4b5563;line-height:1.75;margin-bottom:3rem;max-width:500px;}
+.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;}
+.sol-card{border:1.5px solid #e8e6e1;border-radius:14px;padding:2rem;transition:border-color 0.2s;}
+.sol-card:hover{border-color:#1a56db;}
+.sol-num{font-family:'Bricolage Grotesque',sans-serif;font-size:0.75rem;font-weight:800;color:#1a56db;letter-spacing:0.12em;margin-bottom:1.25rem;}
+.sol-card h3{font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;letter-spacing:-0.01em;}
+.sol-card p{font-size:13.5px;color:#6b7280;line-height:1.75;}
+.sol-tag{display:inline-block;background:#eff6ff;color:#1a56db;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;margin-top:1rem;letter-spacing:0.04em;}
+.checker{background:#f8f7f4;border-top:1px solid #e8e6e1;border-bottom:1px solid #e8e6e1;padding:5rem 2rem;}
+.checker-inner{max-width:780px;margin:0 auto;}
+.checker-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.checker-sub{font-size:15px;color:#4b5563;line-height:1.75;margin-bottom:2.5rem;}
+.checker-box{background:#fff;border:1.5px solid #e8e6e1;border-radius:16px;padding:2.5rem;}
+.ckinp-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px;}
+.ck-g label{display:block;font-size:11px;font-weight:700;color:#9ca3af;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:5px;}
+.ck-g input{width:100%;background:#f8f7f4;border:1.5px solid #e8e6e1;color:#0f1117;padding:11px 13px;border-radius:8px;font-size:14px;font-family:inherit;outline:none;transition:border-color 0.15s;}
+.ck-g input:focus{border-color:#1a56db;background:#fff;}
+.ck-g input::placeholder{color:#d1d5db;}
+.ck-btn{width:100%;background:#0f1117;color:#fff;border:none;padding:14px;border-radius:10px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:background 0.15s;}
+.ck-btn:hover{background:#1f2937;}
+.ck-btn:disabled{background:#d1d5db;color:#9ca3af;cursor:not-allowed;}
+.ck-loader{display:none;text-align:center;padding:2rem 0;}
+.ck-loader.on{display:block;}
+.ck-spin{width:28px;height:28px;border:2.5px solid #e8e6e1;border-top-color:#1a56db;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 0.75rem;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.ck-msg{font-size:13px;color:#9ca3af;}
+.ck-results{display:none;margin-top:2rem;}
+.ck-results.on{display:block;}
+.score-wrap{display:flex;align-items:center;gap:2rem;background:#f8f7f4;border-radius:12px;padding:1.75rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.big-num{font-family:'Bricolage Grotesque',sans-serif;font-size:4.5rem;font-weight:800;line-height:1;flex-shrink:0;}
+.num-hi{color:#16a34a;}.num-md{color:#d97706;}.num-lo{color:#ef4444;}
+.score-meta{flex:1;min-width:160px;}
+.score-biz-name{font-size:1rem;font-weight:700;color:#0f1117;margin-bottom:4px;}
+.score-city{font-size:13px;color:#6b7280;margin-bottom:10px;}
+.grade-pill{display:inline-block;font-size:12px;font-weight:700;padding:4px 12px;border-radius:100px;}
+.gp-hi{background:#dcfce7;color:#15803d;}.gp-md{background:#fef3c7;color:#b45309;}.gp-lo{background:#fee2e2;color:#b91c1c;}
+.score-summary{font-size:14px;color:#4b5563;line-height:1.7;margin-bottom:1.5rem;}
+.plat-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:1.5rem;}
+.plat-item{border:1.5px solid #e8e6e1;border-radius:10px;padding:1rem;}
+.plat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.plat-name-txt{font-size:13px;font-weight:700;color:#0f1117;}
+.plat-score-pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;}
+.psp-hi{background:#dcfce7;color:#15803d;}.psp-md{background:#fef3c7;color:#b45309;}.psp-lo{background:#fee2e2;color:#b91c1c;}
+.plat-bar-bg{height:3px;background:#f3f4f6;border-radius:3px;margin-bottom:8px;}
+.plat-bar-fill{height:3px;border-radius:3px;}
+.plat-finding-txt{font-size:12px;color:#6b7280;line-height:1.6;}
+.findings-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem;}
+@media(max-width:560px){.findings-row{grid-template-columns:1fr;}.hf-row{grid-template-columns:1fr;}.bf-row{grid-template-columns:1fr;}}
+.find-box{border-radius:10px;padding:1.25rem;}
+.find-box.issues{background:#fff5f5;border:1px solid #fecaca;}
+.find-box.wins{background:#f0fdf4;border:1px solid #bbf7d0;}
+.find-title{font-size:12px;font-weight:700;margin-bottom:0.75rem;letter-spacing:0.04em;text-transform:uppercase;}
+.find-box.issues .find-title{color:#b91c1c;}
+.find-box.wins .find-title{color:#15803d;}
+.find-item{display:flex;gap:8px;margin-bottom:6px;font-size:12.5px;color:#374151;line-height:1.55;align-items:flex-start;}
+.find-item:last-child{margin-bottom:0;}
+.find-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+.issues .find-dot{background:#ef4444;}.wins .find-dot{background:#16a34a;}
+.ck-cta{background:#0f1117;border-radius:12px;padding:1.75rem;text-align:center;}
+.ck-cta p{font-size:14px;color:#9ca3af;line-height:1.7;margin-bottom:1rem;}
+.ck-cta-btn{background:#1a56db;color:#fff;border:none;padding:13px 28px;border-radius:8px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;}
+.ck-cta-btn:hover{background:#1447b8;}
+.how{background:#fff;padding:5rem 2rem;border-top:1px solid #e8e6e1;}
+.how-inner{max-width:900px;margin:0 auto;}
+.how-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:3rem;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;}
+.step-item{padding:0 1.5rem 0 0;}
+.step-item:not(:last-child){border-right:1px solid #e8e6e1;margin-right:0;padding-right:1.5rem;}
+@media(max-width:600px){.step-item{border-right:none;border-bottom:1px solid #e8e6e1;padding:0 0 1.5rem 0;margin-bottom:1.5rem;}}
+.step-n{font-family:'Bricolage Grotesque',sans-serif;font-size:0.7rem;font-weight:800;color:#1a56db;letter-spacing:0.1em;margin-bottom:0.75rem;}
+.step-item h4{font-size:0.95rem;font-weight:700;margin-bottom:0.5rem;}
+.step-item p{font-size:13px;color:#6b7280;line-height:1.7;}
+.bottom-cta{background:#1a56db;padding:5rem 2rem;text-align:center;}
+.bottom-cta-inner{max-width:600px;margin:0 auto;}
+.bottom-cta h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-0.02em;color:#fff;margin-bottom:1rem;}
+.bottom-cta p{font-size:15px;color:#93c5fd;line-height:1.75;margin-bottom:2.5rem;}
+.bottom-form{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:14px;padding:2rem;text-align:left;}
+.bf-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.bf-single{margin-bottom:10px;}
+.bf-label{display:block;font-size:11px;font-weight:700;color:rgba(255,255,255,0.5);margin-bottom:5px;letter-spacing:0.06em;text-transform:uppercase;}
+.bf-input{width:100%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:11px 13px;border-radius:8px;font-size:14px;font-family:inherit;outline:none;transition:border-color 0.15s;}
+.bf-input:focus{border-color:rgba(255,255,255,0.6);}
+.bf-input::placeholder{color:rgba(255,255,255,0.3);}
+.bf-btn{width:100%;background:#fff;color:#1a56db;border:none;padding:14px;border-radius:10px;font-size:16px;font-weight:800;font-family:inherit;cursor:pointer;margin-top:4px;transition:background 0.15s;letter-spacing:-0.01em;}
+.bf-btn:hover{background:#eff6ff;}
+.bf-btn:disabled{background:#93c5fd;color:#fff;cursor:not-allowed;}
+.bf-trust{font-size:12px;color:rgba(255,255,255,0.4);text-align:center;margin-top:1rem;}
+footer{background:#0f1117;text-align:center;padding:1.75rem;font-size:12px;color:#374151;}
+footer span{color:#1a56db;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">SEO<span>rank</span></div>
+  <button class="nav-btn" onclick="document.getElementById('bottom-cta').scrollIntoView({behavior:'smooth'})">Book Free Call</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="trust-row">
+      <div class="trust-dot"></div>
+      <span class="trust-text">Now taking new clients in your area</span>
+    </div>
+    <h1>Your business is <span class="blue"><span class="uw">invisible</span></span><br>to AI search. We fix that.</h1>
+    <p class="hero-sub">SEOrank gets your business ranking higher on Google — and showing up when customers ask ChatGPT, Perplexity, and Google AI who to call. Book a free 20-minute strategy call to see exactly where you stand.</p>
+    <div class="hero-form">
+      <div class="hero-form-title">Book your free strategy call</div>
+      <div class="hf-row">
+        <div><label class="hf-label">First name</label><input class="hf-input" id="h-name" type="text" placeholder="Jane" /></div>
+        <div><label class="hf-label">Business name</label><input class="hf-input" id="h-biz" type="text" placeholder="Acme Co." /></div>
+      </div>
+      <div class="hf-single"><label class="hf-label">Best phone or email</label><input class="hf-input" id="h-contact" type="text" placeholder="(555) 000-0000 or you@email.com" /></div>
+      <div class="hf-single"><label class="hf-label">Website (optional)</label><input class="hf-input" id="h-site" type="text" placeholder="www.yourbusiness.com" /></div>
+      <button class="hero-cta" id="hero-cta-btn" onclick="submitHero()">Book My Free Strategy Call &rarr;</button>
+    </div>
+    <div class="micro-trust">
+      <div class="micro-item">
+        <svg class="ci" viewBox="0 0 16 16" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5,8 6,12 13.5,4"/></svg>
+        No commitment
+      </div>
+      <div class="micro-item">
+        <svg class="ci" viewBox="0 0 16 16" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5,8 6,12 13.5,4"/></svg>
+        20-minute call
+      </div>
+      <div class="micro-item">
+        <svg class="ci" viewBox="0 0 16 16" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5,8 6,12 13.5,4"/></svg>
+        No spam ever
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof-bar">
+  <div class="proof-label">Platforms we optimize for</div>
+  <div class="proof-logos">
+    <span class="proof-logo">GOOGLE</span>
+    <span class="proof-logo">CHATGPT</span>
+    <span class="proof-logo">PERPLEXITY</span>
+    <span class="proof-logo">BING AI</span>
+    <span class="proof-logo">GOOGLE AI OVERVIEWS</span>
+  </div>
+</div>
+
+<section class="problem">
+  <div class="problem-inner">
+    <div class="sec-eyebrow">The problem</div>
+    <h2>Search changed. Most businesses haven't caught up.</h2>
+    <p class="sub">When someone asks ChatGPT "who's the best plumber in Dallas?" — does your business get mentioned? For most, the answer is no. Here's why that's costing you money.</p>
+    <div class="prob-cards">
+      <div class="prob-card">
+        <div class="prob-pct">90%</div>
+        <p>of local businesses have zero presence in AI-generated search results — even if they rank well on Google.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-pct">3x</div>
+        <p>more calls go to businesses that appear in AI recommendations vs. those that only rank traditionally.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-pct">2026</div>
+        <p>is the year AI search overtakes traditional search for product and service discovery, per industry analysts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="solution">
+  <div class="sol-inner">
+    <div class="sec-eyebrow">What we do</div>
+    <h2>Everything you need to dominate search — old and new.</h2>
+    <p class="sol-sub">We're not an agency that just runs keywords. We build your visibility across every surface customers use to find businesses right now.</p>
+    <div class="sol-grid">
+      <div class="sol-card">
+        <div class="sol-num">01 &mdash; TRADITIONAL SEO</div>
+        <h3>Rank higher on Google</h3>
+        <p>On-page optimization, keyword strategy, technical audits, Google Business Profile, and local map pack rankings — the proven foundation that still drives the majority of clicks.</p>
+        <span class="sol-tag">Foundational</span>
+      </div>
+      <div class="sol-card">
+        <div class="sol-num">02 &mdash; AI SEARCH</div>
+        <h3>Get cited by ChatGPT &amp; AI</h3>
+        <p>We restructure your content and digital footprint so AI systems recognize your business as a trusted, authoritative answer when customers ask who to hire in your industry.</p>
+        <span class="sol-tag">The new edge</span>
+      </div>
+      <div class="sol-card">
+        <div class="sol-num">03 &mdash; WEBSITE</div>
+        <h3>Turn visitors into calls</h3>
+        <p>Speed, copy, mobile UX, and conversion optimization. Getting found is half the battle — we make sure your site actually convinces people to pick up the phone.</p>
+        <span class="sol-tag">Done for you</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="checker" id="checker">
+  <div class="checker-inner">
+    <div class="sec-eyebrow">Free tool</div>
+    <h2>See exactly how you rank — right now.</h2>
+    <p class="checker-sub">Enter your business info and get an instant AI visibility score across ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Takes 30 seconds.</p>
+    <div class="checker-box">
+      <div class="ckinp-row">
+        <div class="ck-g"><label>Business name</label><input type="text" id="ck-biz" placeholder="Acme Plumbing" /></div>
+        <div class="ck-g"><label>City</label><input type="text" id="ck-city" placeholder="Austin, TX" /></div>
+        <div class="ck-g"><label>Industry</label><input type="text" id="ck-ind" placeholder="Plumbing" /></div>
+      </div>
+      <button class="ck-btn" id="ck-btn" onclick="runCheck()">Check My AI Ranking &rarr;</button>
+      <div class="ck-loader" id="ck-loader">
+        <div class="ck-spin"></div>
+        <p class="ck-msg" id="ck-msg">Querying AI search systems...</p>
+      </div>
+      <div class="ck-results" id="ck-results"></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="how-inner">
+    <div class="sec-eyebrow">Process</div>
+    <h2>Simple. Fast. Done for you.</h2>
+    <div class="steps">
+      <div class="step-item"><div class="step-n">STEP 01</div><h4>Book a free call</h4><p>A quick 20-minute call to look at your current rankings and find the gaps. No pressure, no pitch — just honest intel.</p></div>
+      <div class="step-item"><div class="step-n">STEP 02</div><h4>Get your roadmap</h4><p>We build a custom plan: what we'll fix, what we'll build, and what results to expect — with a clear timeline.</p></div>
+      <div class="step-item"><div class="step-n">STEP 03</div><h4>We execute it</h4><p>Full done-for-you delivery. No technical work on your end. We handle everything and report back monthly.</p></div>
+      <div class="step-item"><div class="step-n">STEP 04</div><h4>You get found</h4><p>Rankings go up. Calls come in. Your business gets cited by AI when customers ask who to hire in your space.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-cta" id="bottom-cta">
+  <div class="bottom-cta-inner">
+    <h2>Ready to stop being invisible?</h2>
+    <p>Book a free 20-minute call and we'll show you exactly where you're losing customers — and how to get them back.</p>
+    <div class="bottom-form">
+      <div class="bf-row">
+        <div><label class="bf-label">First name</label><input class="bf-input" id="b-name" type="text" placeholder="Jane" /></div>
+        <div><label class="bf-label">Business name</label><input class="bf-input" id="b-biz" type="text" placeholder="Acme Co." /></div>
+      </div>
+      <div class="bf-single"><label class="bf-label">Phone or email</label><input class="bf-input" id="b-contact" type="text" placeholder="(555) 000-0000 or you@email.com" /></div>
+      <div class="bf-single"><label class="bf-label">Website (optional)</label><input class="bf-input" id="b-site" type="text" placeholder="www.yourbusiness.com" /></div>
+      <button class="bf-btn" id="bottom-cta-btn" onclick="submitBottom()">Book My Free 20-Min Call &rarr;</button>
+      <p class="bf-trust">No commitment. No spam. We'll reach out within 1 business day.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 <span>SEOrank</span> &nbsp;&middot;&nbsp; Built to get your business found.
+</footer>
+
+<script>
+const loadMsgs=["Querying AI search systems...","Simulating ChatGPT behavior...","Checking Perplexity signals...","Analyzing Google AI Overviews...","Scoring your results..."];
+
+function submitHero(){
+  const n=document.getElementById('h-name').value.trim();
+  const b=document.getElementById('h-biz').value.trim();
+  const c=document.getElementById('h-contact').value.trim();
+  if(!n||!b||!c){alert('Please fill in your name, business, and contact info.');return;}
+  const btn=document.getElementById('hero-cta-btn');
+  btn.textContent="Booked! We'll reach out within 1 business day.";
+  btn.style.background='#15803d';
+  btn.disabled=true;
+}
+
+function submitBottom(){
+  const n=document.getElementById('b-name').value.trim();
+  const b=document.getElementById('b-biz').value.trim();
+  const c=document.getElementById('b-contact').value.trim();
+  if(!n||!b||!c){alert('Please fill in your name, business, and contact info.');return;}
+  const btn=document.getElementById('bottom-cta-btn');
+  btn.textContent="Booked! We'll reach out within 1 business day.";
+  btn.style.background='#bbf7d0';
+  btn.style.color='#15803d';
+  btn.disabled=true;
+}
+
+function sc(s){return s>=65?'num-hi':s>=35?'num-md':'num-lo';}
+function gpc(s){return s>=65?'gp-hi':s>=35?'gp-md':'gp-lo';}
+function pspc(s){return s>=65?'psp-hi':s>=35?'psp-md':'psp-lo';}
+function barcol(s){return s>=65?'#16a34a':s>=35?'#d97706':'#ef4444';}
+
+async function runCheck(){
+  const biz=document.getElementById('ck-biz').value.trim();
+  const city=document.getElementById('ck-city').value.trim();
+  const ind=document.getElementById('ck-ind').value.trim();
+  if(!biz||!city||!ind){alert('Please fill in all three fields.');return;}
+  const btn=document.getElementById('ck-btn');
+  const loader=document.getElementById('ck-loader');
+  const res=document.getElementById('ck-results');
+  btn.disabled=true;btn.textContent='Analyzing...';
+  loader.classList.add('on');res.classList.remove('on');res.innerHTML='';
+  let mi=0;const mel=document.getElementById('ck-msg');
+  const t=setInterval(()=>{mi=(mi+1)%loadMsgs.length;mel.textContent=loadMsgs[mi];},1800);
+  const prompt=`You are an AI search visibility analyst. Give a realistic assessment of how visible this business is across AI search platforms.\n\nBusiness: ${biz}\nCity: ${city}\nIndustry: ${ind}\n\nConsider local market competitiveness, whether this sounds like an established business or small independent, and what typical AI search signals look like for this business type.\n\nReply ONLY with raw JSON, no markdown, no code fences, no extra text:\n{"overall_score":72,"grade":"Fair","summary":"Two sentence plain-English summary of their situation.","platforms":[{"name":"ChatGPT","score":68,"finding":"One to two sentence finding."},{"name":"Perplexity","score":74,"finding":"One to two sentence finding."},{"name":"Google AI Overviews","score":80,"finding":"One to two sentence finding."},{"name":"Bing Copilot","score":61,"finding":"One to two sentence finding."}],"top_issues":["Issue one","Issue two","Issue three"],"quick_wins":["Win one","Win two"]}`;
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:900,messages:[{role:'user',content:prompt}]})
+    });
+    if(!r.ok)throw new Error('Status '+r.status+': '+await r.text());
+    const d=await r.json();
+    if(d.error)throw new Error(d.error.message);
+    const raw=d.content.filter(b=>b.type==='text').map(b=>b.text).join('');
+    const m=raw.match(/\{[\s\S]*\}/);
+    if(!m)throw new Error('No JSON in response');
+    const p=JSON.parse(m[0]);
+    clearInterval(t);loader.classList.remove('on');
+    renderResults(p,biz,city);
+    btn.textContent='Check Another Business';btn.disabled=false;
+  }catch(e){
+    clearInterval(t);loader.classList.remove('on');
+    res.innerHTML=`<p style="color:#ef4444;font-size:13px;text-align:center;padding:1rem 0;">Something went wrong: ${e.message}</p>`;
+    res.classList.add('on');
+    btn.textContent='Check My AI Ranking \u2192';btn.disabled=false;
+  }
+}
+
+function renderResults(d,biz,city){
+  const res=document.getElementById('ck-results');
+  const s=Math.round(d.overall_score);
+  const platsH=(d.platforms||[]).map(p=>{
+    const ps=Math.round(p.score);
+    return`<div class="plat-item"><div class="plat-top"><span class="plat-name-txt">${p.name}</span><span class="plat-score-pill ${pspc(ps)}">${ps}/100</span></div><div class="plat-bar-bg"><div class="plat-bar-fill" style="width:${ps}%;background:${barcol(ps)};"></div></div><p class="plat-finding-txt">${p.finding}</p></div>`;
+  }).join('');
+  const issH=(d.top_issues||[]).map(i=>`<div class="find-item"><div class="find-dot"></div><span>${i}</span></div>`).join('');
+  const winH=(d.quick_wins||[]).map(w=>`<div class="find-item"><div class="find-dot"></div><span>${w}</span></div>`).join('');
+  res.innerHTML=`
+    <div class="score-wrap">
+      <div class="big-num ${sc(s)}">${s}</div>
+      <div class="score-meta">
+        <div class="score-biz-name">${biz}</div>
+        <div class="score-city">${city}</div>
+        <span class="grade-pill ${gpc(s)}">${d.grade} AI Visibility</span>
+      </div>
+    </div>
+    <p class="score-summary">${d.summary}</p>
+    <div class="plat-list">${platsH}</div>
+    <div class="findings-row">
+      <div class="find-box issues"><div class="find-title">What's hurting you</div>${issH}</div>
+      <div class="find-box wins"><div class="find-title">Quick wins</div>${winH}</div>
+    </div>
+    <div class="ck-cta">
+      <p>Want us to fix this for you? Book a free 20-minute call and we'll walk you through exactly how to improve your score.</p>
+      <button class="ck-cta-btn" onclick="document.getElementById('bottom-cta').scrollIntoView({behavior:'smooth'})">Book My Free Strategy Call &rarr;</button>
+    </div>`;
+  res.classList.add('on');
+}
+</script>
+</body>
+</html>
