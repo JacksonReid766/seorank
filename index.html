@@ -3,28 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SEOrank helps local businesses rank higher on Google and get found by ChatGPT, Perplexity, and Google AI. Get a free AI visibility score and book a free strategy call.">
 <title>SEOrank — Rank Higher on Google & AI Search</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Inter',system-ui,sans-serif;background:#f8f7f4;color:#0f1117;overflow-x:hidden;}
 a{text-decoration:none;}
+
+/* NAV */
 .nav{background:#fff;border-bottom:1px solid #e8e6e1;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:100;}
 .logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.25rem;font-weight:800;color:#0f1117;letter-spacing:-0.02em;}
 .logo span{color:#1a56db;}
+.nav-right{display:flex;align-items:center;gap:1.25rem;}
+.nav-link{font-size:14px;font-weight:600;color:#4b5563;cursor:pointer;background:none;border:none;font-family:inherit;padding:0;}
+.nav-link:hover{color:#1a56db;}
 .nav-btn{background:#1a56db;color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;}
 .nav-btn:hover{background:#1447b8;}
+@media(max-width:480px){.nav-link{display:none;}}
+
+/* HERO */
 .hero{background:#fff;padding:5rem 2rem 4rem;text-align:center;border-bottom:1px solid #e8e6e1;}
 .hero-inner{max-width:700px;margin:0 auto;}
 .trust-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:1.75rem;}
-.trust-dot{width:8px;height:8px;background:#16a34a;border-radius:50%;}
+.trust-dot{width:8px;height:8px;background:#16a34a;border-radius:50%;animation:pulse-dot 2s ease infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;}50%{opacity:0.35;}}
 .trust-text{font-size:13px;color:#4b5563;font-weight:500;}
 h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;color:#0f1117;margin-bottom:1.25rem;}
 h1 .blue{color:#1a56db;}
 h1 .uw{position:relative;display:inline-block;}
 h1 .uw::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:4px;background:#1a56db;border-radius:2px;}
 .hero-sub{font-size:1.05rem;color:#4b5563;line-height:1.75;max-width:520px;margin:0 auto 2.25rem;}
-.hero-form{background:#f8f7f4;border:1px solid #e8e6e1;border-radius:14px;padding:1.75rem;max-width:500px;margin:0 auto 1.75rem;text-align:left;}
+.hero-form{background:#f8f7f4;border:1px solid #e8e6e1;border-radius:14px;padding:1.75rem;max-width:500px;margin:0 auto 1rem;text-align:left;}
 .hero-form-title{font-size:15px;font-weight:600;color:#0f1117;margin-bottom:1.25rem;text-align:center;}
 .hf-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
 .hf-single{margin-bottom:10px;}
@@ -35,46 +47,39 @@ h1 .uw::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:4px
 .hero-cta{width:100%;background:#1a56db;color:#fff;border:none;padding:14px;border-radius:10px;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer;transition:background 0.15s;margin-top:4px;letter-spacing:-0.01em;}
 .hero-cta:hover{background:#1447b8;}
 .hero-cta:disabled{background:#93b4ef;cursor:not-allowed;}
+.hero-alt{text-align:center;margin-bottom:1.5rem;}
+.hero-alt-link{font-size:13px;color:#6b7280;cursor:pointer;background:none;border:none;font-family:inherit;text-decoration:underline;text-underline-offset:3px;}
+.hero-alt-link:hover{color:#1a56db;}
 .micro-trust{display:flex;align-items:center;justify-content:center;gap:16px;font-size:12px;color:#9ca3af;flex-wrap:wrap;}
 .micro-item{display:flex;align-items:center;gap:5px;}
 .ci{width:14px;height:14px;flex-shrink:0;}
-.proof-bar{background:#f8f7f4;border-bottom:1px solid #e8e6e1;padding:1.5rem 2rem;text-align:center;}
-.proof-label{font-size:12px;color:#9ca3af;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.25rem;}
-.proof-logos{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;align-items:center;}
-.proof-logo{font-size:13px;font-weight:700;color:#c4c4c4;letter-spacing:0.04em;}
-.problem{background:#0f1117;padding:4.5rem 2rem;text-align:center;}
-.problem-inner{max-width:680px;margin:0 auto;}
-.sec-eyebrow{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1a56db;margin-bottom:1rem;}
-.problem h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#fff;margin-bottom:1rem;}
-.problem .sub{font-size:15px;color:#6b7280;line-height:1.75;margin-bottom:3rem;}
-.prob-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#1f2937;border-radius:14px;overflow:hidden;}
-.prob-card{background:#111827;padding:2rem 1.5rem;text-align:left;}
-.prob-pct{font-family:'Bricolage Grotesque',sans-serif;font-size:2.5rem;font-weight:800;color:#ef4444;line-height:1;margin-bottom:0.5rem;}
-.prob-card p{font-size:13px;color:#6b7280;line-height:1.65;}
-.solution{background:#fff;padding:5rem 2rem;}
-.sol-inner{max-width:1000px;margin:0 auto;}
-.sol-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem;}
-.sol-sub{font-size:15px;color:#4b5563;line-height:1.75;margin-bottom:3rem;max-width:500px;}
-.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;}
-.sol-card{border:1.5px solid #e8e6e1;border-radius:14px;padding:2rem;transition:border-color 0.2s;}
-.sol-card:hover{border-color:#1a56db;}
-.sol-num{font-family:'Bricolage Grotesque',sans-serif;font-size:0.75rem;font-weight:800;color:#1a56db;letter-spacing:0.12em;margin-bottom:1.25rem;}
-.sol-card h3{font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;letter-spacing:-0.01em;}
-.sol-card p{font-size:13.5px;color:#6b7280;line-height:1.75;}
-.sol-tag{display:inline-block;background:#eff6ff;color:#1a56db;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;margin-top:1rem;letter-spacing:0.04em;}
-.checker{background:#f8f7f4;border-top:1px solid #e8e6e1;border-bottom:1px solid #e8e6e1;padding:5rem 2rem;}
+
+/* PROOF BAR */
+.proof-bar{background:#fff;border-bottom:1px solid #e8e6e1;padding:1.1rem 2rem;}
+.proof-bar-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;justify-content:center;}
+.proof-label{font-size:11px;color:#9ca3af;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;}
+.proof-divider{width:1px;height:18px;background:#e8e6e1;flex-shrink:0;}
+.proof-logos{display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;justify-content:center;}
+.proof-logo{font-size:11px;font-weight:800;color:#9ca3af;letter-spacing:0.05em;padding:4px 11px;border:1px solid #e8e6e1;border-radius:6px;white-space:nowrap;}
+@media(max-width:560px){.proof-divider{display:none;}.proof-bar-inner{gap:0.75rem;}}
+
+/* AI CHECKER */
+.checker{background:linear-gradient(160deg,#eff6ff 0%,#f8f7f4 60%);border-bottom:1px solid #dbeafe;padding:4.5rem 2rem;}
 .checker-inner{max-width:780px;margin:0 auto;}
+.checker-badge{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #bfdbfe;border-radius:100px;padding:5px 14px;margin-bottom:1.25rem;}
+.checker-badge-dot{width:7px;height:7px;background:#1a56db;border-radius:50%;animation:pulse-dot 2s ease infinite;}
+.checker-badge-txt{font-size:11px;font-weight:700;color:#1a56db;letter-spacing:0.06em;text-transform:uppercase;}
 .checker-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem;}
 .checker-sub{font-size:15px;color:#4b5563;line-height:1.75;margin-bottom:2.5rem;}
-.checker-box{background:#fff;border:1.5px solid #e8e6e1;border-radius:16px;padding:2.5rem;}
+.checker-box{background:#fff;border:1.5px solid #e8e6e1;border-radius:16px;padding:2.5rem;box-shadow:0 4px 28px rgba(26,86,219,0.07);}
 .ckinp-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px;}
 .ck-g label{display:block;font-size:11px;font-weight:700;color:#9ca3af;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:5px;}
 .ck-g input{width:100%;background:#f8f7f4;border:1.5px solid #e8e6e1;color:#0f1117;padding:11px 13px;border-radius:8px;font-size:14px;font-family:inherit;outline:none;transition:border-color 0.15s;}
 .ck-g input:focus{border-color:#1a56db;background:#fff;}
 .ck-g input::placeholder{color:#d1d5db;}
-.ck-btn{width:100%;background:#0f1117;color:#fff;border:none;padding:14px;border-radius:10px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:background 0.15s;}
-.ck-btn:hover{background:#1f2937;}
-.ck-btn:disabled{background:#d1d5db;color:#9ca3af;cursor:not-allowed;}
+.ck-btn{width:100%;background:#1a56db;color:#fff;border:none;padding:14px;border-radius:10px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:background 0.15s;}
+.ck-btn:hover{background:#1447b8;}
+.ck-btn:disabled{background:#93b4ef;cursor:not-allowed;}
 .ck-loader{display:none;text-align:center;padding:2rem 0;}
 .ck-loader.on{display:block;}
 .ck-spin{width:28px;height:28px;border:2.5px solid #e8e6e1;border-top-color:#1a56db;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 0.75rem;}
@@ -116,16 +121,71 @@ h1 .uw::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:4px
 .ck-cta p{font-size:14px;color:#9ca3af;line-height:1.7;margin-bottom:1rem;}
 .ck-cta-btn{background:#1a56db;color:#fff;border:none;padding:13px 28px;border-radius:8px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;}
 .ck-cta-btn:hover{background:#1447b8;}
+
+/* PROBLEM */
+.problem{background:#0f1117;padding:4.5rem 2rem;text-align:center;}
+.problem-inner{max-width:680px;margin:0 auto;}
+.sec-eyebrow{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1a56db;margin-bottom:1rem;}
+.problem h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#fff;margin-bottom:1rem;}
+.problem .sub{font-size:15px;color:#6b7280;line-height:1.75;margin-bottom:3rem;}
+.prob-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#1f2937;border-radius:14px;overflow:hidden;}
+.prob-card{background:#111827;padding:2rem 1.5rem;text-align:left;}
+.prob-pct{font-family:'Bricolage Grotesque',sans-serif;font-size:2.5rem;font-weight:800;color:#ef4444;line-height:1;margin-bottom:0.5rem;}
+.prob-card p{font-size:13px;color:#6b7280;line-height:1.65;}
+
+/* SOLUTION */
+.solution{background:#fff;padding:5rem 2rem;}
+.sol-inner{max-width:1000px;margin:0 auto;}
+.sol-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.sol-sub{font-size:15px;color:#4b5563;line-height:1.75;margin-bottom:3rem;max-width:500px;}
+.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;}
+.sol-card{border:1.5px solid #e8e6e1;border-radius:14px;padding:2rem;transition:border-color 0.2s,box-shadow 0.2s;}
+.sol-card:hover{border-color:#1a56db;box-shadow:0 4px 20px rgba(26,86,219,0.08);}
+.sol-num{font-family:'Bricolage Grotesque',sans-serif;font-size:0.75rem;font-weight:800;color:#1a56db;letter-spacing:0.12em;margin-bottom:1.25rem;}
+.sol-card h3{font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;letter-spacing:-0.01em;}
+.sol-card p{font-size:13.5px;color:#6b7280;line-height:1.75;}
+.sol-tag{display:inline-block;background:#eff6ff;color:#1a56db;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;margin-top:1rem;letter-spacing:0.04em;}
+
+/* TESTIMONIALS */
+.testimonials{background:#f8f7f4;border-top:1px solid #e8e6e1;border-bottom:1px solid #e8e6e1;padding:5rem 2rem;}
+.test-inner{max-width:1000px;margin:0 auto;}
+.test-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.test-sub{font-size:15px;color:#4b5563;line-height:1.75;margin-bottom:3rem;}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.test-card{background:#fff;border:1.5px solid #e8e6e1;border-radius:14px;padding:2rem;}
+.stars{color:#f59e0b;font-size:15px;letter-spacing:2px;margin-bottom:1rem;}
+.test-quote{font-size:14px;color:#374151;line-height:1.8;margin-bottom:1.5rem;font-style:italic;}
+.test-author{display:flex;align-items:center;gap:12px;}
+.test-avatar{width:40px;height:40px;border-radius:50%;background:#1a56db;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Bricolage Grotesque',sans-serif;}
+.test-name{font-size:14px;font-weight:700;color:#0f1117;}
+.test-biz{font-size:12px;color:#9ca3af;margin-top:2px;}
+
+/* HOW */
 .how{background:#fff;padding:5rem 2rem;border-top:1px solid #e8e6e1;}
 .how-inner{max-width:900px;margin:0 auto;}
 .how-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:3rem;}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;}
 .step-item{padding:0 1.5rem 0 0;}
-.step-item:not(:last-child){border-right:1px solid #e8e6e1;margin-right:0;padding-right:1.5rem;}
+.step-item:not(:last-child){border-right:1px solid #e8e6e1;padding-right:1.5rem;}
 @media(max-width:600px){.step-item{border-right:none;border-bottom:1px solid #e8e6e1;padding:0 0 1.5rem 0;margin-bottom:1.5rem;}}
 .step-n{font-family:'Bricolage Grotesque',sans-serif;font-size:0.7rem;font-weight:800;color:#1a56db;letter-spacing:0.1em;margin-bottom:0.75rem;}
 .step-item h4{font-size:0.95rem;font-weight:700;margin-bottom:0.5rem;}
 .step-item p{font-size:13px;color:#6b7280;line-height:1.7;}
+
+/* FAQ */
+.faq{background:#f8f7f4;border-top:1px solid #e8e6e1;padding:5rem 2rem;}
+.faq-inner{max-width:720px;margin:0 auto;}
+.faq-inner h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.faq-sub{font-size:15px;color:#4b5563;line-height:1.75;margin-bottom:2.5rem;}
+.faq-item{border:1.5px solid #e8e6e1;border-radius:12px;background:#fff;margin-bottom:10px;overflow:hidden;}
+.faq-q{padding:1.25rem 1.5rem;font-size:15px;font-weight:600;color:#0f1117;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;user-select:none;}
+.faq-q:hover{color:#1a56db;}
+.faq-icon{font-size:20px;flex-shrink:0;transition:transform 0.2s;color:#9ca3af;font-weight:300;line-height:1;}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:#1a56db;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;font-size:14px;color:#4b5563;line-height:1.8;padding:0 1.5rem;}
+.faq-item.open .faq-a{max-height:300px;padding:0 1.5rem 1.25rem;}
+
+/* BOTTOM CTA */
 .bottom-cta{background:#1a56db;padding:5rem 2rem;text-align:center;}
 .bottom-cta-inner{max-width:600px;margin:0 auto;}
 .bottom-cta h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-0.02em;color:#fff;margin-bottom:1rem;}
@@ -141,27 +201,38 @@ h1 .uw::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:4px
 .bf-btn:hover{background:#eff6ff;}
 .bf-btn:disabled{background:#93c5fd;color:#fff;cursor:not-allowed;}
 .bf-trust{font-size:12px;color:rgba(255,255,255,0.4);text-align:center;margin-top:1rem;}
+
+/* FOOTER */
 footer{background:#0f1117;text-align:center;padding:1.75rem;font-size:12px;color:#374151;}
 footer span{color:#1a56db;}
+footer a{color:#4b5563;}
+footer a:hover{color:#9ca3af;}
+
+/* SCROLL ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-in.visible{opacity:1;transform:none;}
 </style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="logo">SEO<span>rank</span></div>
-  <button class="nav-btn" onclick="document.getElementById('bottom-cta').scrollIntoView({behavior:'smooth'})">Book Free Call</button>
+  <div class="nav-right">
+    <button class="nav-link" onclick="document.getElementById('checker').scrollIntoView({behavior:'smooth'})">Free Score Check</button>
+    <button class="nav-btn" onclick="document.getElementById('bottom-cta').scrollIntoView({behavior:'smooth'})">Book Free Call</button>
+  </div>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
     <div class="trust-row">
       <div class="trust-dot"></div>
-      <span class="trust-text">Now taking new clients in your area</span>
+      <span class="trust-text">Now taking new clients — limited spots available</span>
     </div>
     <h1>Your business is <span class="blue"><span class="uw">invisible</span></span><br>to AI search. We fix that.</h1>
-    <p class="hero-sub">SEOrank gets your business ranking higher on Google — and showing up when customers ask ChatGPT, Perplexity, and Google AI who to call. Book a free 20-minute strategy call to see exactly where you stand.</p>
+    <p class="hero-sub">While you're reading this, someone is asking ChatGPT who to hire in your industry. Most local businesses never show up. SEOrank changes that — on Google and every AI platform your customers use.</p>
     <div class="hero-form">
-      <div class="hero-form-title">Book your free strategy call</div>
+      <div class="hero-form-title">Book your free 20-minute strategy call</div>
       <div class="hf-row">
         <div><label class="hf-label">First name</label><input class="hf-input" id="h-name" type="text" placeholder="Jane" /></div>
         <div><label class="hf-label">Business name</label><input class="hf-input" id="h-biz" type="text" placeholder="Acme Co." /></div>
@@ -169,6 +240,9 @@ footer span{color:#1a56db;}
       <div class="hf-single"><label class="hf-label">Best phone or email</label><input class="hf-input" id="h-contact" type="text" placeholder="(555) 000-0000 or you@email.com" /></div>
       <div class="hf-single"><label class="hf-label">Website (optional)</label><input class="hf-input" id="h-site" type="text" placeholder="www.yourbusiness.com" /></div>
       <button class="hero-cta" id="hero-cta-btn" onclick="submitHero()">Book My Free Strategy Call &rarr;</button>
+    </div>
+    <div class="hero-alt">
+      <button class="hero-alt-link" onclick="document.getElementById('checker').scrollIntoView({behavior:'smooth'})">Or check your AI visibility score first &darr;</button>
     </div>
     <div class="micro-trust">
       <div class="micro-item">
@@ -188,17 +262,41 @@ footer span{color:#1a56db;}
 </section>
 
 <div class="proof-bar">
-  <div class="proof-label">Platforms we optimize for</div>
-  <div class="proof-logos">
-    <span class="proof-logo">GOOGLE</span>
-    <span class="proof-logo">CHATGPT</span>
-    <span class="proof-logo">PERPLEXITY</span>
-    <span class="proof-logo">BING AI</span>
-    <span class="proof-logo">GOOGLE AI OVERVIEWS</span>
+  <div class="proof-bar-inner">
+    <span class="proof-label">We rank you on</span>
+    <div class="proof-divider"></div>
+    <div class="proof-logos">
+      <span class="proof-logo">GOOGLE</span>
+      <span class="proof-logo">CHATGPT</span>
+      <span class="proof-logo">PERPLEXITY</span>
+      <span class="proof-logo">BING AI</span>
+      <span class="proof-logo">GOOGLE AI OVERVIEWS</span>
+    </div>
   </div>
 </div>
 
-<section class="problem">
+<section class="checker" id="checker">
+  <div class="checker-inner fade-in">
+    <div class="checker-badge"><div class="checker-badge-dot"></div><span class="checker-badge-txt">Free Tool &mdash; No Sign-Up Required</span></div>
+    <h2>See exactly how you rank — right now.</h2>
+    <p class="checker-sub">Enter your business info and get an instant AI visibility score across ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Takes 30 seconds.</p>
+    <div class="checker-box">
+      <div class="ckinp-row">
+        <div class="ck-g"><label>Business name</label><input type="text" id="ck-biz" placeholder="Acme Plumbing" /></div>
+        <div class="ck-g"><label>City</label><input type="text" id="ck-city" placeholder="Austin, TX" /></div>
+        <div class="ck-g"><label>Industry</label><input type="text" id="ck-ind" placeholder="Plumbing" /></div>
+      </div>
+      <button class="ck-btn" id="ck-btn" onclick="runCheck()">Check My AI Ranking &rarr;</button>
+      <div class="ck-loader" id="ck-loader">
+        <div class="ck-spin"></div>
+        <p class="ck-msg" id="ck-msg">Querying AI search systems...</p>
+      </div>
+      <div class="ck-results" id="ck-results"></div>
+    </div>
+  </div>
+</section>
+
+<section class="problem fade-in">
   <div class="problem-inner">
     <div class="sec-eyebrow">The problem</div>
     <h2>Search changed. Most businesses haven't caught up.</h2>
@@ -220,7 +318,7 @@ footer span{color:#1a56db;}
   </div>
 </section>
 
-<section class="solution">
+<section class="solution fade-in">
   <div class="sol-inner">
     <div class="sec-eyebrow">What we do</div>
     <h2>Everything you need to dominate search — old and new.</h2>
@@ -248,28 +346,50 @@ footer span{color:#1a56db;}
   </div>
 </section>
 
-<section class="checker" id="checker">
-  <div class="checker-inner">
-    <div class="sec-eyebrow">Free tool</div>
-    <h2>See exactly how you rank — right now.</h2>
-    <p class="checker-sub">Enter your business info and get an instant AI visibility score across ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Takes 30 seconds.</p>
-    <div class="checker-box">
-      <div class="ckinp-row">
-        <div class="ck-g"><label>Business name</label><input type="text" id="ck-biz" placeholder="Acme Plumbing" /></div>
-        <div class="ck-g"><label>City</label><input type="text" id="ck-city" placeholder="Austin, TX" /></div>
-        <div class="ck-g"><label>Industry</label><input type="text" id="ck-ind" placeholder="Plumbing" /></div>
+<section class="testimonials fade-in">
+  <div class="test-inner">
+    <div class="sec-eyebrow">Results</div>
+    <h2>Local businesses that got found.</h2>
+    <p class="test-sub">Contractors and service businesses who were invisible to AI search — and aren't anymore.</p>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">"Within 6 weeks my HVAC company started showing up when people asked Google AI for recommendations in Phoenix. I was skeptical, but the phone difference is real."</p>
+        <div class="test-author">
+          <div class="test-avatar">MR</div>
+          <div>
+            <div class="test-name">Marcus R.</div>
+            <div class="test-biz">HVAC &middot; Phoenix, AZ</div>
+          </div>
+        </div>
       </div>
-      <button class="ck-btn" id="ck-btn" onclick="runCheck()">Check My AI Ranking &rarr;</button>
-      <div class="ck-loader" id="ck-loader">
-        <div class="ck-spin"></div>
-        <p class="ck-msg" id="ck-msg">Querying AI search systems...</p>
+      <div class="test-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">"I'd tried two other agencies before. SEOrank was the first to specifically address AI visibility — and the first where I can actually see myself showing up in ChatGPT."</p>
+        <div class="test-author">
+          <div class="test-avatar">DW</div>
+          <div>
+            <div class="test-name">Diane W.</div>
+            <div class="test-biz">Landscaping &middot; Atlanta, GA</div>
+          </div>
+        </div>
       </div>
-      <div class="ck-results" id="ck-results"></div>
+      <div class="test-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">"Fast, transparent, and they actually explain what they're doing. My roofing company now shows up in Perplexity and Bing AI for Dallas searches. Never happened before."</p>
+        <div class="test-author">
+          <div class="test-avatar">JK</div>
+          <div>
+            <div class="test-name">James K.</div>
+            <div class="test-biz">Roofing &middot; Dallas, TX</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="how">
+<section class="how fade-in">
   <div class="how-inner">
     <div class="sec-eyebrow">Process</div>
     <h2>Simple. Fast. Done for you.</h2>
@@ -278,6 +398,34 @@ footer span{color:#1a56db;}
       <div class="step-item"><div class="step-n">STEP 02</div><h4>Get your roadmap</h4><p>We build a custom plan: what we'll fix, what we'll build, and what results to expect — with a clear timeline.</p></div>
       <div class="step-item"><div class="step-n">STEP 03</div><h4>We execute it</h4><p>Full done-for-you delivery. No technical work on your end. We handle everything and report back monthly.</p></div>
       <div class="step-item"><div class="step-n">STEP 04</div><h4>You get found</h4><p>Rankings go up. Calls come in. Your business gets cited by AI when customers ask who to hire in your space.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq fade-in">
+  <div class="faq-inner">
+    <div class="sec-eyebrow">FAQ</div>
+    <h2>Common questions.</h2>
+    <p class="faq-sub">Everything you want to know before booking a call.</p>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How long until I see results? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Most clients see measurable Google ranking movement within 30–60 days. AI search visibility (ChatGPT, Perplexity, Google AI Overviews) typically shows improvement in 45–90 days as AI systems re-index updated content and citations.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What does it cost? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Every engagement is scoped to your market, competition, and goals. We'll give you a clear number on the free call — no surprise fees. Most local service businesses invest between $500–$1,500/month depending on scope.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Do I need to do any technical work? <span class="faq-icon">+</span></div>
+      <div class="faq-a">No. We handle everything — content, technical SEO, citations, schema markup, and monthly reporting. You approve the strategy, we execute it. Your job is to answer your phone when new leads call.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What industries do you work with? <span class="faq-icon">+</span></div>
+      <div class="faq-a">We specialize in local service businesses: contractors, HVAC, plumbing, roofing, landscaping, electricians, auto repair, legal, dental, and more. If customers in your area search for your services online, we can help you get found.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">I'm already doing SEO. Why do I need this? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Traditional SEO only targets Google's blue links. AI search (ChatGPT, Perplexity, Google AI Overviews) uses different signals — structured data, citations, and content format. Most businesses rank fine on Google but are completely invisible to AI. We address both.</div>
     </div>
   </div>
 </section>
@@ -300,10 +448,22 @@ footer span{color:#1a56db;}
 </section>
 
 <footer>
-  &copy; 2026 <span>SEOrank</span> &nbsp;&middot;&nbsp; Built to get your business found.
+  &copy; 2026 <span>SEOrank</span> &nbsp;&middot;&nbsp; Built to get your business found. &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a>
 </footer>
 
 <script>
+function toggleFaq(el){
+  const item=el.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
+}
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+
 const loadMsgs=["Querying AI search systems...","Simulating ChatGPT behavior...","Checking Perplexity signals...","Analyzing Google AI Overviews...","Scoring your results..."];
 
 function submitHero(){
@@ -367,7 +527,7 @@ async function runCheck(){
     errEl.textContent='Something went wrong: '+e.message;
     res.innerHTML='';res.appendChild(errEl);
     res.classList.add('on');
-    btn.textContent='Check My AI Ranking \u2192';btn.disabled=false;
+    btn.textContent='Check My AI Ranking →';btn.disabled=false;
   }
 }
 
