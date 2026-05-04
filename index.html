@@ -409,42 +409,41 @@ document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
 const loadMsgs=["Querying AI search systems...","Simulating ChatGPT behavior...","Checking Perplexity signals...","Analyzing Google AI Overviews...","Scoring your results..."];
 
-const SHEET_URL='https://script.google.com/macros/s/AKfycbwZxbq00mh5VYf0Il14IIJNrqNQYOt0L8EWqNDJm8YKdmEv6S-pInZsLJv-V32tfxIY/exec';
+const WORKER='https://seorank-checker.jacksonreid766.workers.dev';
 
-function sendToSheet(name,business,contact,website,source){
-  fetch(SHEET_URL,{
+async function submitLead(name,business,contact,website,source){
+  await fetch(WORKER+'/submit',{
     method:'POST',
-    mode:'no-cors',
-    headers:{'Content-Type':'text/plain'},
+    headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name,business,contact,website,source})
   }).catch(()=>{});
 }
 
-function submitHero(){
+async function submitHero(){
   const n=document.getElementById('h-name').value.trim();
   const b=document.getElementById('h-biz').value.trim();
   const c=document.getElementById('h-contact').value.trim();
   const w=document.getElementById('h-site').value.trim();
   if(!n||!b||!c){alert('Please fill in your name, business, and contact info.');return;}
-  sendToSheet(n,b,c,w,'Hero Form');
   const btn=document.getElementById('hero-cta-btn');
+  btn.textContent='Sending...';btn.disabled=true;
+  await submitLead(n,b,c,w,'Hero Form');
   btn.textContent="Booked! We'll reach out within 1 business day.";
   btn.style.background='#15803d';
-  btn.disabled=true;
 }
 
-function submitBottom(){
+async function submitBottom(){
   const n=document.getElementById('b-name').value.trim();
   const b=document.getElementById('b-biz').value.trim();
   const c=document.getElementById('b-contact').value.trim();
   const w=document.getElementById('b-site').value.trim();
   if(!n||!b||!c){alert('Please fill in your name, business, and contact info.');return;}
-  sendToSheet(n,b,c,w,'Bottom Form');
   const btn=document.getElementById('bottom-cta-btn');
+  btn.textContent='Sending...';btn.disabled=true;
+  await submitLead(n,b,c,w,'Bottom Form');
   btn.textContent="Booked! We'll reach out within 1 business day.";
   btn.style.background='#bbf7d0';
   btn.style.color='#15803d';
-  btn.disabled=true;
 }
 
 function sc(s){return s>=65?'num-hi':s>=35?'num-md':'num-lo';}
