@@ -349,7 +349,7 @@ async function runCheck(){
   let mi=0;const mel=document.getElementById('ck-msg');
   const t=setInterval(()=>{mi=(mi+1)%loadMsgs.length;mel.textContent=loadMsgs[mi];},1800);
   try{
-    const r=await fetch('/api/check',{
+    const r=await fetch('https://seorank-checker.jacksonreid766.workers.dev',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({biz,city,ind})
